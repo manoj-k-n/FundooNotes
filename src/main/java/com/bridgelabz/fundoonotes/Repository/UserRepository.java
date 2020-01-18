@@ -11,7 +11,7 @@ import com.bridgelabz.fundoonotes.model.User;
 @Transactional
 public interface UserRepository extends CrudRepository<User,String>
 {
-    User findOneByEmail(String email);
+    User findOneByEmail(Object object);
     
 //    @Query(value = "update user set is_email_verify=true where email=?1",nativeQuery = true)
 //    void setVerified(String email);

@@ -43,6 +43,12 @@ private boolean is_email_verify;
 private List<Notes> notes;
 
 
+public long getId() {
+	return id;
+}
+public void setId(long id) {
+	this.id = id;
+}
 public Date getCreatdate() {
 	return creatdate;
 	

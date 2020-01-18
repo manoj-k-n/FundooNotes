@@ -1,13 +1,11 @@
 package com.bridgelabz.fundoonotes.Repository;
 
-import javax.transaction.Transactional;
-
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.bridgelabz.fundoonotes.model.Notes;
 
 
-public interface NoteRepository extends CrudRepository<Notes,Long>
+public interface NoteRepository extends JpaRepository<Notes,Long>
 {
-  Notes findById(long Id);
+  Notes findById(long id);
 }
