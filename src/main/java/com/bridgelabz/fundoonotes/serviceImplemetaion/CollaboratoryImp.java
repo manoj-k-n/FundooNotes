@@ -1,5 +1,8 @@
 package com.bridgelabz.fundoonotes.serviceImplemetaion;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,5 +46,50 @@ public class CollaboratoryImp implements ServiceCollaboratore {
 		} else {
 			return false;
 		}
+	}
+	@Override
+	public boolean deletCollaborate(String token, long idc)
+	{
+	String s=util.MailDetails(token);
+	User u=user.findOneByEmail(s);
+	Collaborater c=collaboRep.findById(idc);
+	System.out.println(c);
+	if(u!=null&&c!=null)
+	{
+		collaboRep.deleteById(idc);
+		
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+	}
+	@Override
+	public List<Collaborater> getAllCollaborate(String token, long idn) {
+		String s=util.MailDetails(token);
+		User u=user.findOneByEmail(s);
+		Notes n=note.findById(idn);
+		if(u!=null&&n!=null)
+		{
+			List<Collaborater> ll=new ArrayList<Collaborater>();
+			long l=n.getId();
+			for(Collaborater o:collaboRep.findAll())
+			{
+				if(l==(o.getNotes().getId()))
+						{
+					      ll.add(o);
+						}
+				
+			}
+			return ll;
+			
+		}
+		else
+		{
+			return null;	
+		}
+				
+		
 	}
 }

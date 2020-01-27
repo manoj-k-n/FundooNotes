@@ -3,12 +3,14 @@ package com.bridgelabz.fundoonotes.utility;
 import java.io.UnsupportedEncodingException;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Component;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.Verification;
+
 
 public class Utility {
 	static BCryptPasswordEncoder bc = new BCryptPasswordEncoder();

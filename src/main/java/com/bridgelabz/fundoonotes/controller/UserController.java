@@ -4,9 +4,11 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bridgelabz.fundoonotes.dto.UserDTOLogin;
@@ -17,15 +19,17 @@ import com.bridgelabz.fundoonotes.response.Response;
 import com.bridgelabz.fundoonotes.service.ServiceInterface;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
+@RequestMapping
 public class UserController {
 	@Autowired
 	private ServiceInterface service;
 	
-	
-
+ 
 	@PostMapping("/users/register")
 	public ResponseEntity<Response> register(@Valid @RequestBody UserDto user) {
 
+		System.out.println("hello welocme");
 		Boolean is_registered_succ = service.register(user);
 
 		if (is_registered_succ) {

@@ -1,12 +1,11 @@
 package com.bridgelabz.fundoonotes.Repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.CrudRepository;
 
 import com.bridgelabz.fundoonotes.model.Collaborater;
 
-@Repository
-public interface CollaboratoreRepository extends JpaRepository<Collaborater, Long>
-{
 
+public interface CollaboratoreRepository extends CrudRepository<Collaborater, Long>
+{
+      Collaborater findById(long Id);
 }

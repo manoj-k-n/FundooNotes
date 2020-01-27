@@ -17,7 +17,7 @@ import com.bridgelabz.fundoonotes.utility.MailVerification;
 import com.bridgelabz.fundoonotes.utility.Utility;
 
 @Service
-public class ServiceImplementation implements ServiceInterface {
+public class UserServiceImplementation implements ServiceInterface {
 
 	@Autowired
 	private UserRepository userRepo;

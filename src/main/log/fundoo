@@ -1,0 +1,409 @@
+2020-01-27 17:09:04.739  INFO 8309 --- [main] c.b.fundoonotes.FundooNotesApplication   : Starting FundooNotesApplication on mobicomp with PID 8309 (/home/user/Documents/workspace-sts-3.9.11.RELEASE/FundooNotes/target/classes started by user in /home/user/Documents/workspace-sts-3.9.11.RELEASE/FundooNotes)
+2020-01-27 17:09:04.756  INFO 8309 --- [main] c.b.fundoonotes.FundooNotesApplication   : No active profile set, falling back to default profiles: default
+2020-01-27 17:09:06.297  INFO 8309 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-01-27 17:09:06.435  INFO 8309 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 126ms. Found 4 JPA repository interfaces.
+2020-01-27 17:09:06.866  INFO 8309 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-27 17:09:07.901  INFO 8309 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-27 17:09:07.914  INFO 8309 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 17:09:07.915  INFO 8309 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 17:09:08.225  INFO 8309 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 17:09:08.226  INFO 8309 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3308 ms
+2020-01-27 17:09:08.674  INFO 8309 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-27 17:09:08.771  INFO 8309 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2020-01-27 17:09:08.952  INFO 8309 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-01-27 17:09:09.065  INFO 8309 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-27 17:09:09.892  INFO 8309 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-27 17:09:09.907  INFO 8309 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-27 17:09:11.266  INFO 8309 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-27 17:09:11.274  INFO 8309 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-27 17:09:11.409  INFO 8309 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Utility com.bridgelabz.fundoonotes.config.ApplicationConfig.getUserObject()
+2020-01-27 17:09:11.409  INFO 8309 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 17:09:11.460  INFO 8309 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : After method:Utility com.bridgelabz.fundoonotes.config.ApplicationConfig.getUserObject()
+2020-01-27 17:09:11.460  INFO 8309 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 17:09:12.902  WARN 8309 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-27 17:09:13.504  INFO 8309 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 17:09:14.476  INFO 8309 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-27 17:09:14.479  INFO 8309 --- [main] c.b.fundoonotes.FundooNotesApplication   : Started FundooNotesApplication in 10.314 seconds (JVM running for 12.058)
+2020-01-27 17:17:43.368  INFO 8309 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 17:17:43.370  INFO 8309 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 17:17:43.391  INFO 8309 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2020-01-27 17:17:43.450  INFO 8309 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:17:43.450  INFO 8309 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 17:17:43.456  INFO 8309 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:17:43.456  INFO 8309 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 17:20:49.514  INFO 8309 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-01-27 17:20:49.519  INFO 8309 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-27 17:20:49.522  INFO 8309 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-27 17:20:49.530  INFO 8309 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-01-27 17:20:49.577  INFO 8309 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-01-27 17:20:53.664  INFO 9312 --- [main] c.b.fundoonotes.FundooNotesApplication   : Starting FundooNotesApplication on mobicomp with PID 9312 (/home/user/Documents/workspace-sts-3.9.11.RELEASE/FundooNotes/target/classes started by user in /home/user/Documents/workspace-sts-3.9.11.RELEASE/FundooNotes)
+2020-01-27 17:20:53.668  INFO 9312 --- [main] c.b.fundoonotes.FundooNotesApplication   : No active profile set, falling back to default profiles: default
+2020-01-27 17:20:55.321  INFO 9312 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-01-27 17:20:55.446  INFO 9312 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114ms. Found 4 JPA repository interfaces.
+2020-01-27 17:20:56.015  INFO 9312 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-27 17:20:57.045  INFO 9312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-27 17:20:57.056  INFO 9312 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 17:20:57.057  INFO 9312 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 17:20:57.347  INFO 9312 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 17:20:57.348  INFO 9312 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3585 ms
+2020-01-27 17:20:57.787  INFO 9312 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-27 17:20:57.857  INFO 9312 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2020-01-27 17:20:57.987  INFO 9312 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-01-27 17:20:58.095  INFO 9312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-27 17:20:58.891  INFO 9312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-27 17:20:58.907  INFO 9312 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-27 17:21:00.208  INFO 9312 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-27 17:21:00.390  INFO 9312 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-27 17:21:00.533  INFO 9312 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Utility com.bridgelabz.fundoonotes.config.ApplicationConfig.getUserObject()
+2020-01-27 17:21:00.533  INFO 9312 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 17:21:00.582  INFO 9312 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : After method:Utility com.bridgelabz.fundoonotes.config.ApplicationConfig.getUserObject()
+2020-01-27 17:21:00.583  INFO 9312 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 17:21:02.591  WARN 9312 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-27 17:21:03.135  INFO 9312 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 17:21:04.232  INFO 9312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-27 17:21:04.236  INFO 9312 --- [main] c.b.fundoonotes.FundooNotesApplication   : Started FundooNotesApplication in 11.05 seconds (JVM running for 12.518)
+2020-01-27 17:21:10.505  INFO 9312 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 17:21:10.506  INFO 9312 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 17:21:10.525  INFO 9312 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-01-27 17:21:10.738  INFO 9312 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:21:10.738  INFO 9312 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 17:21:10.744  INFO 9312 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:21:10.745  INFO 9312 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 17:23:47.994  INFO 9312 --- [http-nio-8080-exec-2] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:23:48.121  INFO 9312 --- [http-nio-8080-exec-2] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 17:23:48.122  INFO 9312 --- [http-nio-8080-exec-2] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:23:48.122  INFO 9312 --- [http-nio-8080-exec-2] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 17:26:14.234  INFO 9312 --- [http-nio-8080-exec-4] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:26:14.235  INFO 9312 --- [http-nio-8080-exec-4] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 17:26:14.235  INFO 9312 --- [http-nio-8080-exec-4] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:26:14.235  INFO 9312 --- [http-nio-8080-exec-4] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 17:26:54.518  INFO 9312 --- [http-nio-8080-exec-5] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:26:54.518  INFO 9312 --- [http-nio-8080-exec-5] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 17:26:54.519  INFO 9312 --- [http-nio-8080-exec-5] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:26:54.519  INFO 9312 --- [http-nio-8080-exec-5] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 17:27:27.629  INFO 9312 --- [http-nio-8080-exec-6] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:27:27.630  INFO 9312 --- [http-nio-8080-exec-6] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 17:27:27.630  INFO 9312 --- [http-nio-8080-exec-6] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:27:27.630  INFO 9312 --- [http-nio-8080-exec-6] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 17:31:18.052  INFO 9312 --- [http-nio-8080-exec-8] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:31:18.053  INFO 9312 --- [http-nio-8080-exec-8] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 17:31:18.053  INFO 9312 --- [http-nio-8080-exec-8] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:31:18.053  INFO 9312 --- [http-nio-8080-exec-8] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 17:38:19.206  INFO 9312 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-01-27 17:38:19.216  INFO 9312 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-27 17:38:19.219  INFO 9312 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-27 17:38:19.225  INFO 9312 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-01-27 17:38:19.256  INFO 9312 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-01-27 17:38:23.109  INFO 9807 --- [main] c.b.fundoonotes.FundooNotesApplication   : Starting FundooNotesApplication on mobicomp with PID 9807 (/home/user/Documents/workspace-sts-3.9.11.RELEASE/FundooNotes/target/classes started by user in /home/user/Documents/workspace-sts-3.9.11.RELEASE/FundooNotes)
+2020-01-27 17:38:23.112  INFO 9807 --- [main] c.b.fundoonotes.FundooNotesApplication   : No active profile set, falling back to default profiles: default
+2020-01-27 17:38:24.382  INFO 9807 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-01-27 17:38:24.510  INFO 9807 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117ms. Found 4 JPA repository interfaces.
+2020-01-27 17:38:25.103  INFO 9807 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-27 17:38:26.152  INFO 9807 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-27 17:38:26.165  INFO 9807 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 17:38:26.165  INFO 9807 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 17:38:26.472  INFO 9807 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 17:38:26.473  INFO 9807 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3292 ms
+2020-01-27 17:38:26.912  INFO 9807 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-27 17:38:26.980  INFO 9807 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2020-01-27 17:38:27.107  INFO 9807 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-01-27 17:38:27.209  INFO 9807 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-27 17:38:27.811  INFO 9807 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-27 17:38:27.827  INFO 9807 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-27 17:38:29.216  INFO 9807 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-27 17:38:29.227  INFO 9807 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-27 17:38:29.369  INFO 9807 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Utility com.bridgelabz.fundoonotes.config.ApplicationConfig.getUserObject()
+2020-01-27 17:38:29.369  INFO 9807 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 17:38:29.391  INFO 9807 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : After method:Utility com.bridgelabz.fundoonotes.config.ApplicationConfig.getUserObject()
+2020-01-27 17:38:29.392  INFO 9807 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 17:38:30.939  WARN 9807 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-27 17:38:31.370  INFO 9807 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 17:38:32.524  INFO 9807 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-27 17:38:32.528  INFO 9807 --- [main] c.b.fundoonotes.FundooNotesApplication   : Started FundooNotesApplication in 9.901 seconds (JVM running for 11.306)
+2020-01-27 17:42:01.107  INFO 9807 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 17:42:01.108  INFO 9807 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 17:42:01.128  INFO 9807 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2020-01-27 17:42:01.178  INFO 9807 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:42:01.178  INFO 9807 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 17:42:01.184  INFO 9807 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:42:01.184  INFO 9807 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 17:43:59.358  INFO 9807 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-01-27 17:43:59.368  INFO 9807 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-27 17:43:59.381  INFO 9807 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-27 17:43:59.393  INFO 9807 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-01-27 17:43:59.437  INFO 9807 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-01-27 17:44:14.991  INFO 10231 --- [main] c.b.fundoonotes.FundooNotesApplication   : Starting FundooNotesApplication on mobicomp with PID 10231 (/home/user/Documents/workspace-sts-3.9.11.RELEASE/FundooNotes/target/classes started by user in /home/user/Documents/workspace-sts-3.9.11.RELEASE/FundooNotes)
+2020-01-27 17:44:14.996  INFO 10231 --- [main] c.b.fundoonotes.FundooNotesApplication   : No active profile set, falling back to default profiles: default
+2020-01-27 17:44:16.069  INFO 10231 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-01-27 17:44:16.205  INFO 10231 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125ms. Found 4 JPA repository interfaces.
+2020-01-27 17:44:16.652  INFO 10231 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-27 17:44:17.487  INFO 10231 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-27 17:44:17.507  INFO 10231 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 17:44:17.508  INFO 10231 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 17:44:17.707  INFO 10231 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 17:44:17.708  INFO 10231 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2620 ms
+2020-01-27 17:44:18.040  INFO 10231 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-27 17:44:18.123  INFO 10231 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2020-01-27 17:44:18.269  INFO 10231 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-01-27 17:44:18.386  INFO 10231 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-27 17:44:19.004  INFO 10231 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-27 17:44:19.021  INFO 10231 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-27 17:44:20.291  INFO 10231 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-27 17:44:20.303  INFO 10231 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-27 17:44:20.483  INFO 10231 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Utility com.bridgelabz.fundoonotes.config.ApplicationConfig.getUserObject()
+2020-01-27 17:44:20.483  INFO 10231 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 17:44:20.511  INFO 10231 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : After method:Utility com.bridgelabz.fundoonotes.config.ApplicationConfig.getUserObject()
+2020-01-27 17:44:20.511  INFO 10231 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 17:44:22.096  WARN 10231 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-27 17:44:22.545  INFO 10231 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 17:44:23.135  INFO 10231 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-27 17:44:23.139  INFO 10231 --- [main] c.b.fundoonotes.FundooNotesApplication   : Started FundooNotesApplication in 8.693 seconds (JVM running for 9.691)
+2020-01-27 17:44:30.911  INFO 10231 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 17:44:30.912  INFO 10231 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 17:44:30.931  INFO 10231 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2020-01-27 17:44:30.978  INFO 10231 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:44:30.978  INFO 10231 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 17:44:30.985  INFO 10231 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:44:30.985  INFO 10231 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 17:47:27.707  INFO 10231 --- [http-nio-8080-exec-2] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:47:27.710  INFO 10231 --- [http-nio-8080-exec-2] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 17:47:27.710  INFO 10231 --- [http-nio-8080-exec-2] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:47:27.710  INFO 10231 --- [http-nio-8080-exec-2] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 17:53:57.849  INFO 10231 --- [http-nio-8080-exec-3] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:53:57.855  INFO 10231 --- [http-nio-8080-exec-3] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 17:53:57.855  INFO 10231 --- [http-nio-8080-exec-3] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:53:57.855  INFO 10231 --- [http-nio-8080-exec-3] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 17:54:45.346  INFO 10231 --- [http-nio-8080-exec-4] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:54:45.347  INFO 10231 --- [http-nio-8080-exec-4] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 17:54:45.347  INFO 10231 --- [http-nio-8080-exec-4] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 17:54:45.347  INFO 10231 --- [http-nio-8080-exec-4] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:11:57.689  INFO 10231 --- [http-nio-8080-exec-6] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:11:57.691  INFO 10231 --- [http-nio-8080-exec-6] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:11:57.692  INFO 10231 --- [http-nio-8080-exec-6] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:11:57.692  INFO 10231 --- [http-nio-8080-exec-6] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:21:20.825  INFO 10231 --- [http-nio-8080-exec-8] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:21:20.853  INFO 10231 --- [http-nio-8080-exec-8] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:21:20.854  INFO 10231 --- [http-nio-8080-exec-8] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:21:20.854  INFO 10231 --- [http-nio-8080-exec-8] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:22:16.350  INFO 10231 --- [http-nio-8080-exec-9] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:22:16.350  INFO 10231 --- [http-nio-8080-exec-9] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:22:16.351  INFO 10231 --- [http-nio-8080-exec-9] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:22:16.351  INFO 10231 --- [http-nio-8080-exec-9] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:44:06.124  INFO 13177 --- [main] c.b.fundoonotes.FundooNotesApplication   : Starting FundooNotesApplication on mobicomp with PID 13177 (/home/user/Documents/workspace-sts-3.9.11.RELEASE/FundooNotes/target/classes started by user in /home/user/Documents/workspace-sts-3.9.11.RELEASE/FundooNotes)
+2020-01-27 18:44:06.129  INFO 13177 --- [main] c.b.fundoonotes.FundooNotesApplication   : No active profile set, falling back to default profiles: default
+2020-01-27 18:44:08.251  INFO 13177 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-01-27 18:44:08.653  INFO 13177 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 382ms. Found 4 JPA repository interfaces.
+2020-01-27 18:44:09.451  INFO 13177 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-27 18:44:10.501  INFO 13177 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-27 18:44:10.513  INFO 13177 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 18:44:10.514  INFO 13177 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 18:44:10.821  INFO 13177 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 18:44:10.821  INFO 13177 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4525 ms
+2020-01-27 18:44:10.858  INFO 13177 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:FilterRegistrationBean com.bridgelabz.fundoonotes.config.AppCorsConfiguration.corsFilter()
+2020-01-27 18:44:10.858  INFO 13177 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:44:10.878  INFO 13177 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : After method:FilterRegistrationBean com.bridgelabz.fundoonotes.config.AppCorsConfiguration.corsFilter()
+2020-01-27 18:44:10.878  INFO 13177 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:44:11.500  INFO 13177 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-27 18:44:11.597  INFO 13177 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2020-01-27 18:44:11.792  INFO 13177 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-01-27 18:44:11.901  INFO 13177 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-27 18:44:12.709  INFO 13177 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-27 18:44:12.724  INFO 13177 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-27 18:44:13.905  INFO 13177 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-27 18:44:13.912  INFO 13177 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-27 18:44:14.021  INFO 13177 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Utility com.bridgelabz.fundoonotes.config.ApplicationConfig.getUserObject()
+2020-01-27 18:44:14.021  INFO 13177 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:44:14.032  INFO 13177 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : After method:Utility com.bridgelabz.fundoonotes.config.ApplicationConfig.getUserObject()
+2020-01-27 18:44:14.033  INFO 13177 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:44:15.740  WARN 13177 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-27 18:44:16.320  INFO 13177 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 18:44:17.277  INFO 13177 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-01-27 18:44:17.286  INFO 13177 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-01-27 18:44:17.291 ERROR 13177 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-01-27 18:44:17.294  INFO 13177 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-27 18:44:17.296  INFO 13177 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-27 18:44:17.299  INFO 13177 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-01-27 18:44:17.313  INFO 13177 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-01-27 18:44:35.331  INFO 10231 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:44:35.331  INFO 10231 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:44:35.332  INFO 10231 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:44:35.332  INFO 10231 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:45:32.096  INFO 13252 --- [main] c.b.fundoonotes.FundooNotesApplication   : Starting FundooNotesApplication on mobicomp with PID 13252 (/home/user/Documents/workspace-sts-3.9.11.RELEASE/FundooNotes/target/classes started by user in /home/user/Documents/workspace-sts-3.9.11.RELEASE/FundooNotes)
+2020-01-27 18:45:32.100  INFO 13252 --- [main] c.b.fundoonotes.FundooNotesApplication   : No active profile set, falling back to default profiles: default
+2020-01-27 18:45:33.149  INFO 13252 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-01-27 18:45:33.274  INFO 13252 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115ms. Found 4 JPA repository interfaces.
+2020-01-27 18:45:33.646  INFO 13252 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-27 18:45:34.177  INFO 13252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9020 (http)
+2020-01-27 18:45:34.188  INFO 13252 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 18:45:34.189  INFO 13252 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 18:45:34.317  INFO 13252 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 18:45:34.317  INFO 13252 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2147 ms
+2020-01-27 18:45:34.350  INFO 13252 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:FilterRegistrationBean com.bridgelabz.fundoonotes.config.AppCorsConfiguration.corsFilter()
+2020-01-27 18:45:34.351  INFO 13252 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:45:34.371  INFO 13252 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : After method:FilterRegistrationBean com.bridgelabz.fundoonotes.config.AppCorsConfiguration.corsFilter()
+2020-01-27 18:45:34.371  INFO 13252 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:45:34.632  INFO 13252 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-27 18:45:34.691  INFO 13252 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2020-01-27 18:45:34.800  INFO 13252 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-01-27 18:45:34.893  INFO 13252 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-27 18:45:35.519  INFO 13252 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-27 18:45:35.533  INFO 13252 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-27 18:45:36.573  INFO 13252 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-27 18:45:36.580  INFO 13252 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-27 18:45:36.685  INFO 13252 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Utility com.bridgelabz.fundoonotes.config.ApplicationConfig.getUserObject()
+2020-01-27 18:45:36.685  INFO 13252 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:45:36.698  INFO 13252 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : After method:Utility com.bridgelabz.fundoonotes.config.ApplicationConfig.getUserObject()
+2020-01-27 18:45:36.698  INFO 13252 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:45:37.777  WARN 13252 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-27 18:45:38.199  INFO 13252 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 18:45:38.876  INFO 13252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9020 (http) with context path ''
+2020-01-27 18:45:38.880  INFO 13252 --- [main] c.b.fundoonotes.FundooNotesApplication   : Started FundooNotesApplication in 7.272 seconds (JVM running for 8.116)
+2020-01-27 18:45:50.461  INFO 10231 --- [http-nio-8080-exec-3] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:45:50.462  INFO 10231 --- [http-nio-8080-exec-3] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:45:50.462  INFO 10231 --- [http-nio-8080-exec-3] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:45:50.462  INFO 10231 --- [http-nio-8080-exec-3] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:45:55.811  INFO 10231 --- [http-nio-8080-exec-4] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:45:55.811  INFO 10231 --- [http-nio-8080-exec-4] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:45:55.811  INFO 10231 --- [http-nio-8080-exec-4] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:45:55.812  INFO 10231 --- [http-nio-8080-exec-4] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:47:05.817  INFO 10231 --- [http-nio-8080-exec-6] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:47:05.818  INFO 10231 --- [http-nio-8080-exec-6] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:47:05.818  INFO 10231 --- [http-nio-8080-exec-6] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:47:05.819  INFO 10231 --- [http-nio-8080-exec-6] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:49:23.331  INFO 10231 --- [http-nio-8080-exec-8] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:49:23.331  INFO 10231 --- [http-nio-8080-exec-8] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:49:23.332  INFO 10231 --- [http-nio-8080-exec-8] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:49:23.332  INFO 10231 --- [http-nio-8080-exec-8] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:49:45.741  INFO 10231 --- [http-nio-8080-exec-9] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:49:45.741  INFO 10231 --- [http-nio-8080-exec-9] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:49:45.741  INFO 10231 --- [http-nio-8080-exec-9] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:49:45.741  INFO 10231 --- [http-nio-8080-exec-9] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:49:48.939  INFO 10231 --- [http-nio-8080-exec-10] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:49:48.940  INFO 10231 --- [http-nio-8080-exec-10] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:49:48.940  INFO 10231 --- [http-nio-8080-exec-10] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:49:48.940  INFO 10231 --- [http-nio-8080-exec-10] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:49:51.554  INFO 10231 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:49:51.555  INFO 10231 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:49:51.556  INFO 10231 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:49:51.556  INFO 10231 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:51:20.556  INFO 13252 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-01-27 18:51:20.560  INFO 13252 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-27 18:51:20.562  INFO 13252 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-27 18:51:20.567  INFO 13252 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-01-27 18:51:20.598  INFO 13252 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-01-27 18:51:29.549  INFO 13687 --- [main] c.b.fundoonotes.FundooNotesApplication   : Starting FundooNotesApplication on mobicomp with PID 13687 (/home/user/Documents/workspace-sts-3.9.11.RELEASE/FundooNotes/target/classes started by user in /home/user/Documents/workspace-sts-3.9.11.RELEASE/FundooNotes)
+2020-01-27 18:51:29.555  INFO 13687 --- [main] c.b.fundoonotes.FundooNotesApplication   : No active profile set, falling back to default profiles: default
+2020-01-27 18:51:30.676  INFO 13687 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-01-27 18:51:30.822  INFO 13687 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136ms. Found 4 JPA repository interfaces.
+2020-01-27 18:51:31.275  INFO 13687 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-27 18:51:31.864  INFO 13687 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9020 (http)
+2020-01-27 18:51:31.875  INFO 13687 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 18:51:31.876  INFO 13687 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 18:51:32.003  INFO 13687 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 18:51:32.004  INFO 13687 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2359 ms
+2020-01-27 18:51:32.040  INFO 13687 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:FilterRegistrationBean com.bridgelabz.fundoonotes.config.AppCorsConfiguration.corsFilter()
+2020-01-27 18:51:32.041  INFO 13687 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:51:32.064  INFO 13687 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : After method:FilterRegistrationBean com.bridgelabz.fundoonotes.config.AppCorsConfiguration.corsFilter()
+2020-01-27 18:51:32.064  INFO 13687 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:51:32.344  INFO 13687 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-27 18:51:32.414  INFO 13687 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2020-01-27 18:51:32.530  INFO 13687 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-01-27 18:51:32.630  INFO 13687 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-27 18:51:33.567  INFO 13687 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-27 18:51:33.581  INFO 13687 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-27 18:51:34.773  INFO 13687 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-27 18:51:34.780  INFO 13687 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-27 18:51:34.886  INFO 13687 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Utility com.bridgelabz.fundoonotes.config.ApplicationConfig.getUserObject()
+2020-01-27 18:51:34.887  INFO 13687 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:51:34.899  INFO 13687 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : After method:Utility com.bridgelabz.fundoonotes.config.ApplicationConfig.getUserObject()
+2020-01-27 18:51:34.899  INFO 13687 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:51:36.011  WARN 13687 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-27 18:51:36.418  INFO 13687 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 18:51:37.125  INFO 13687 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9020 (http) with context path ''
+2020-01-27 18:51:37.129  INFO 13687 --- [main] c.b.fundoonotes.FundooNotesApplication   : Started FundooNotesApplication in 8.115 seconds (JVM running for 9.245)
+2020-01-27 18:51:50.862  INFO 10231 --- [http-nio-8080-exec-3] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:51:50.862  INFO 10231 --- [http-nio-8080-exec-3] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:51:50.863  INFO 10231 --- [http-nio-8080-exec-3] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:51:50.863  INFO 10231 --- [http-nio-8080-exec-3] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:52:01.467  INFO 10231 --- [http-nio-8080-exec-4] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:52:01.467  INFO 10231 --- [http-nio-8080-exec-4] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:52:01.467  INFO 10231 --- [http-nio-8080-exec-4] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:52:01.468  INFO 10231 --- [http-nio-8080-exec-4] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:52:07.345  INFO 10231 --- [http-nio-8080-exec-5] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:52:07.345  INFO 10231 --- [http-nio-8080-exec-5] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:52:07.346  INFO 10231 --- [http-nio-8080-exec-5] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:52:07.346  INFO 10231 --- [http-nio-8080-exec-5] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:52:31.671  INFO 13687 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-01-27 18:52:31.677  INFO 13687 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-27 18:52:31.679  INFO 13687 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-27 18:52:31.686  INFO 13687 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-01-27 18:52:31.712  INFO 13687 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-01-27 18:52:38.106  INFO 13784 --- [main] c.b.fundoonotes.FundooNotesApplication   : Starting FundooNotesApplication on mobicomp with PID 13784 (/home/user/Documents/workspace-sts-3.9.11.RELEASE/FundooNotes/target/classes started by user in /home/user/Documents/workspace-sts-3.9.11.RELEASE/FundooNotes)
+2020-01-27 18:52:38.110  INFO 13784 --- [main] c.b.fundoonotes.FundooNotesApplication   : No active profile set, falling back to default profiles: default
+2020-01-27 18:52:39.100  INFO 13784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-01-27 18:52:39.230  INFO 13784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119ms. Found 4 JPA repository interfaces.
+2020-01-27 18:52:39.607  INFO 13784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-27 18:52:40.131  INFO 13784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9020 (http)
+2020-01-27 18:52:40.142  INFO 13784 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 18:52:40.143  INFO 13784 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 18:52:40.266  INFO 13784 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 18:52:40.266  INFO 13784 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2082 ms
+2020-01-27 18:52:40.303  INFO 13784 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:FilterRegistrationBean com.bridgelabz.fundoonotes.config.AppCorsConfiguration.corsFilter()
+2020-01-27 18:52:40.303  INFO 13784 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:52:40.325  INFO 13784 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : After method:FilterRegistrationBean com.bridgelabz.fundoonotes.config.AppCorsConfiguration.corsFilter()
+2020-01-27 18:52:40.325  INFO 13784 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:52:40.595  INFO 13784 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-27 18:52:40.664  INFO 13784 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2020-01-27 18:52:40.783  INFO 13784 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-01-27 18:52:40.885  INFO 13784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-27 18:52:41.620  INFO 13784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-27 18:52:41.633  INFO 13784 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-27 18:52:42.560  INFO 13784 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-27 18:52:42.568  INFO 13784 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-27 18:52:42.672  INFO 13784 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Utility com.bridgelabz.fundoonotes.config.ApplicationConfig.getUserObject()
+2020-01-27 18:52:42.673  INFO 13784 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:52:42.685  INFO 13784 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : After method:Utility com.bridgelabz.fundoonotes.config.ApplicationConfig.getUserObject()
+2020-01-27 18:52:42.686  INFO 13784 --- [main] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:52:43.784  WARN 13784 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-27 18:52:44.194  INFO 13784 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 18:52:44.777  INFO 13784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9020 (http) with context path ''
+2020-01-27 18:52:44.780  INFO 13784 --- [main] c.b.fundoonotes.FundooNotesApplication   : Started FundooNotesApplication in 7.125 seconds (JVM running for 7.924)
+2020-01-27 18:52:54.507  INFO 10231 --- [http-nio-8080-exec-6] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:52:54.507  INFO 10231 --- [http-nio-8080-exec-6] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:52:54.507  INFO 10231 --- [http-nio-8080-exec-6] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:52:54.508  INFO 10231 --- [http-nio-8080-exec-6] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:53:03.785  INFO 10231 --- [http-nio-8080-exec-7] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:53:03.786  INFO 10231 --- [http-nio-8080-exec-7] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:53:03.786  INFO 10231 --- [http-nio-8080-exec-7] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:53:03.786  INFO 10231 --- [http-nio-8080-exec-7] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 18:53:06.902  INFO 10231 --- [http-nio-8080-exec-8] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:53:06.902  INFO 10231 --- [http-nio-8080-exec-8] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 18:53:06.902  INFO 10231 --- [http-nio-8080-exec-8] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 18:53:06.902  INFO 10231 --- [http-nio-8080-exec-8] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 19:16:35.302  INFO 10231 --- [http-nio-8080-exec-10] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 19:16:35.304  INFO 10231 --- [http-nio-8080-exec-10] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 19:16:35.305  INFO 10231 --- [http-nio-8080-exec-10] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 19:16:35.305  INFO 10231 --- [http-nio-8080-exec-10] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 19:17:30.701  INFO 10231 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 19:17:30.702  INFO 10231 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 19:17:30.702  INFO 10231 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 19:17:30.702  INFO 10231 --- [http-nio-8080-exec-1] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
+2020-01-27 19:29:09.604  INFO 10231 --- [http-nio-8080-exec-3] c.b.fundoonotes.aop.UserServiceAspect    : Before method Execute:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 19:29:09.604  INFO 10231 --- [http-nio-8080-exec-3] c.b.fundoonotes.aop.UserServiceAspect    : User Enter the mathod:
+2020-01-27 19:29:09.605  INFO 10231 --- [http-nio-8080-exec-3] c.b.fundoonotes.aop.UserServiceAspect    : After method:Response com.bridgelabz.fundoonotes.exception.GlobalException.unKnownException(Exception)
+2020-01-27 19:29:09.605  INFO 10231 --- [http-nio-8080-exec-3] c.b.fundoonotes.aop.UserServiceAspect    : Successfully response returned
