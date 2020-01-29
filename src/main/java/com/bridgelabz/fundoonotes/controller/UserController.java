@@ -5,6 +5,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,8 +20,8 @@ import com.bridgelabz.fundoonotes.response.Response;
 import com.bridgelabz.fundoonotes.service.ServiceInterface;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
-@RequestMapping
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+//@RequestMapping
 public class UserController {
 	@Autowired
 	private ServiceInterface service;
@@ -29,7 +30,7 @@ public class UserController {
 	@PostMapping("/users/register")
 	public ResponseEntity<Response> register(@Valid @RequestBody UserDto user) {
 
-		System.out.println("hello welocme");
+	
 		Boolean is_registered_succ = service.register(user);
 
 		if (is_registered_succ) {
@@ -40,8 +41,8 @@ public class UserController {
 
 	
 
-	@PostMapping("/users/login")
-	public ResponseEntity<Response> login(@Valid @RequestBody UserDTOLogin user) {
+	@PostMapping("/users/login/")
+	public ResponseEntity<Response> login( @RequestBody UserDTOLogin user) {
 		String is_login = service.login(user);
 		if(is_login!=null)
 		{
@@ -53,7 +54,7 @@ public class UserController {
 		}
 	}
 	
-	@PostMapping("users/verify/{Token}")
+	@GetMapping("users/verify/{Token}")
 	public ResponseEntity<Response> verfiy(@PathVariable("Token") String Token)
 	{
 		boolean b=service.verificationMail(Token);
@@ -71,14 +72,14 @@ public class UserController {
 	@PostMapping("users/forgotpassword")
 	public ResponseEntity<Response> forgotpassword(@RequestBody UserDtoforgot user)
 	{
-	  boolean bb= service.forgot(user);
-	  if(bb)
+	  String token= service.forgot(user);
+	  if(token!=null)
 	  {
-		  return ResponseEntity.ok().body(new Response("Successfull",200,""));
+		  return ResponseEntity.ok().body(new Response("Successfull",200,token));
 	  }
 	  else
 	  {
-		  return ResponseEntity.ok().body(new Response("Faild",400, ""));
+		  return ResponseEntity.ok().body(new Response("Faild",400, token));
 	  }
 	}
 	

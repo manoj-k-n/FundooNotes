@@ -26,13 +26,13 @@ public class UserServiceAspect {
 	public void logBefore(JoinPoint joinPoint) {
 		System.out.println(joinPoint.getSignature());
 		log.info("Before method Execute:" + joinPoint.getSignature());
-		log.info("User Enter the mathod:");
+		
 	}
 
 	@After("execution(* com.bridgelabz.fundoonotes.*.*.*(..))")
 	public void logAfter(JoinPoint joinPoint) {
 		log.info("After method:" + joinPoint.getSignature());
-		log.info("Successfully response returned");
+		
 	}
 
 	@Around("execution(* com.bridgelabz.fundoonotes.serviceImpletation.*.*(..))")

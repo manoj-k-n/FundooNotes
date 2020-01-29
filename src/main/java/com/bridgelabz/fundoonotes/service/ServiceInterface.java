@@ -12,6 +12,6 @@ public interface ServiceInterface {
 	boolean register(UserDto user);
 	String login(UserDTOLogin user);
 	boolean verificationMail(String token);
-	boolean forgot(UserDtoforgot user);
+	String forgot(UserDtoforgot user);
 	boolean resetpass(String token, UserDtoReset user);
 }

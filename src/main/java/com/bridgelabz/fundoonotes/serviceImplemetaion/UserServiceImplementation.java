@@ -39,7 +39,7 @@ public class UserServiceImplementation implements ServiceInterface {
 			us.setLastname(user.getLastname());
 			us.setMobileno(user.getMobileno());
 			us.setPassword(util.encoder(user.getPassword()));
-			us.setPassword2(util.encoder(user.getPassword2()));
+			us.setPassword2(util.encoder(user.getPasswordagain()));
 			us.setMail(user.getEmail());
 			us.setCreatdate();
 
@@ -101,20 +101,20 @@ public class UserServiceImplementation implements ServiceInterface {
 	}
 
 	@Override
-	public boolean forgot(UserDtoforgot user) {
+	public String forgot(UserDtoforgot user) {
 		User u = userRepo.findOneByEmail(user.getEmail());
 		if (u != null && u.isIs_email_verify() == true) {
 			try {
 				String token = util.jwtToken(user.getEmail());
 				mail.sendpassword(u.getMail(), token);
-				return true;
+				return token;
 			} catch (IllegalArgumentException | JWTCreationException | UnsupportedEncodingException e) {
 
 				e.printStackTrace();
-				return false;
+				return null;
 			}
 		} else {
-			return false;
+			return null;
 
 		}
 

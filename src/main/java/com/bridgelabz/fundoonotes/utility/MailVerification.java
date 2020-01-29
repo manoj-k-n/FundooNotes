@@ -6,27 +6,26 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MailVerification 
-{
+public class MailVerification {
 	@Autowired
 	private JavaMailSender emailsender;
-	public void sendVerificationMail(String mail, String token) 
-	{
-		SimpleMailMessage msg=new SimpleMailMessage();
+
+	public void sendVerificationMail(String mail, String token) {
+		SimpleMailMessage msg = new SimpleMailMessage();
+		System.out.println(mail);
 		msg.setTo(mail);
 		msg.setSubject("Verify user");
-		msg.setText("click here:http://localhost:8080/users/verify/"+token);
-	
-	      emailsender.send(msg);	
+		msg.setText("click here:http://localhost:8080/users/verify/" + token);
+
+		emailsender.send(msg);
 	}
-	
-	public void sendpassword(String mail,String token)
-	{
-		SimpleMailMessage msg=new SimpleMailMessage();
+
+	public void sendpassword(String mail, String token) {
+		SimpleMailMessage msg = new SimpleMailMessage();
 		msg.setSubject("Forgot password");
 		msg.setTo(mail);
-		msg.setText("Click here:http://localhost:8080/users/resetpassword/"+token);
-		
+		msg.setText("Click here:http://localhost:8080/users/resetpassword/" + token);
+
 		emailsender.send(msg);
 	}
 }
