@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -44,12 +45,16 @@ public class UserController {
 	@PostMapping("/users/login/")
 	public ResponseEntity<Response> login( @RequestBody UserDTOLogin user) {
 		String is_login = service.login(user);
+		System.out.println(is_login);
 		if(is_login!=null)
 		{
+			System.out.println("Valid");
 			return ResponseEntity.ok().body(new Response("Login Success",200,is_login));
+			
 		}
 		else
 		{
+			System.out.println(" not Valid");
 			return ResponseEntity.ok().body(new Response("Login Fail",400,is_login));
 		}
 	}
@@ -83,7 +88,7 @@ public class UserController {
 	  }
 	}
 	
-	@PostMapping("users/resetpassword/{Token}")
+	@PutMapping("users/resetpassword/{Token}")
 	public ResponseEntity<Response> resetpassword(@PathVariable("Token") String Token, @RequestBody UserDtoReset user )
 	{
 		boolean b=service.resetpass(Token,user);
@@ -96,5 +101,5 @@ public class UserController {
 			return ResponseEntity.ok().body(new Response("Faild", 400,""));
 		}
 	}
-
+	
 }

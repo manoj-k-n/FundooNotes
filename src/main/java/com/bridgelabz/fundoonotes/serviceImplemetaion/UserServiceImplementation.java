@@ -62,17 +62,20 @@ public class UserServiceImplementation implements ServiceInterface {
 		User u = userRepo.findOneByEmail(user.getEmail());
 		
 		if (u != null && u.getMail().equals(user.getEmail())
-				&& util.passwordMatcher(user.getPassword(), u.getPassword()) && u.isIs_email_verify()) {
+				&& util.passwordMatcher(user.getPassword(), u.getPassword()) && u.isIs_email_verify()) 
+		{
 			try {
 				String s=util.jwtToken(u.getMail());
+				System.out.println("its Working");
 				return s;
 			} catch (IllegalArgumentException | JWTCreationException | UnsupportedEncodingException e) {
-
+             System.out.println("Bad comment");
 				e.printStackTrace();
 				return null;
 			}
 
 		} else {
+			System.out.println("not valid");
 			return null;
 		}
 
@@ -103,6 +106,7 @@ public class UserServiceImplementation implements ServiceInterface {
 	@Override
 	public String forgot(UserDtoforgot user) {
 		User u = userRepo.findOneByEmail(user.getEmail());
+		System.out.println(u);
 		if (u != null && u.isIs_email_verify() == true) {
 			try {
 				String token = util.jwtToken(user.getEmail());

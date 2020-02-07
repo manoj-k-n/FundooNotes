@@ -29,7 +29,9 @@ public class NoteController {
 
 	@PostMapping("/notes/{Token}")
 	public ResponseEntity<Response> creatnots(@Valid @RequestBody NoteDto note, @PathVariable("Token") String Token) {
-
+      System.out.println(note);
+      System.out.println("......");
+      System.out.println("helll "+Token);
 		boolean b = service.creatnots(note, Token);
 		if (b) {
 			return ResponseEntity.ok().body(new Response("Successfull", 200, ""));

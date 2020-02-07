@@ -18,6 +18,7 @@ public class MailVerification {
 		msg.setText("click here:http://localhost:8080/users/verify/" + token);
 
 		emailsender.send(msg);
+		
 	}
 
 	public void sendpassword(String mail, String token) {
