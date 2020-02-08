@@ -102,9 +102,10 @@ public class NoteController {
 			return ResponseEntity.ok().body(new Response("Failed",400,b));
 		}
 	}
-	@GetMapping("/getAll")
-	public ResponseEntity<Response> getall(@Valid @RequestHeader("token") String token)
+	@GetMapping("/getAll/{token}")
+	public ResponseEntity<Response> getall(@Valid @PathVariable("token") String token)
 	{
+		System.out.println("yes .....");
 		List<Notes> n=service.getAll(token);
 		if(n!=null)
 		{
