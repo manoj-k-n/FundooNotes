@@ -12,6 +12,7 @@ import com.bridgelabz.fundoonotes.Repository.NoteRepository;
 import com.bridgelabz.fundoonotes.Repository.UserRepository;
 import com.bridgelabz.fundoonotes.Repository.labelsRepository;
 import com.bridgelabz.fundoonotes.dto.NoteDto;
+import com.bridgelabz.fundoonotes.dto.NoteEdite;
 import com.bridgelabz.fundoonotes.model.Labels;
 import com.bridgelabz.fundoonotes.model.Notes;
 import com.bridgelabz.fundoonotes.model.User;
@@ -179,5 +180,27 @@ public class NotsServiceImp implements ServiceNotes {
 			return true;
 		}
 		return false;
+	}
+	@Override
+	public boolean edite(String token, long id, NoteEdite edite)
+	{
+	 String s=util.MailDetails(token);
+	 User u=userRepo.findOneByEmail(s);
+	 Notes n=NotesRep.findById(id);
+	 if(u!=null&&n!=null)
+	 {
+		 n.setTitle(edite.getTitle());
+		 n.setTake_a_note(edite.getTake_a_note());
+		 n.setArchive(edite.isArchive());
+		 n.setColour(edite.getColour());
+		 n.setPin_Note(edite.isPin_note());
+		 n.setTrash(edite.isTransh());
+		 NotesRep.save(n);
+		 return true;
+	 }
+	 else
+	 {
+		 return false;
+	 }
 	}
 }

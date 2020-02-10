@@ -2,6 +2,7 @@ package com.bridgelabz.fundoonotes.controller;
 
 import java.util.List;
 
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bridgelabz.fundoonotes.dto.NoteDto;
+import com.bridgelabz.fundoonotes.dto.NoteEdite;
 import com.bridgelabz.fundoonotes.model.Notes;
 import com.bridgelabz.fundoonotes.response.Response;
 import com.bridgelabz.fundoonotes.service.ServiceNotes;
@@ -158,6 +160,19 @@ public class NoteController {
 			return ResponseEntity.ok().body(new Response("Failed",400,""));
 		}
 		
+	}
+	@PutMapping("/editNotes/{id}/{token}")
+	public ResponseEntity<Response> edite(@PathVariable String token,@PathVariable long id,@RequestBody NoteEdite edite)
+	{
+		boolean b=service.edite(token,id,edite);
+		if(b)
+		{
+			return ResponseEntity.ok().body(new Response("Success",200,""));
+		}
+		else
+		{
+			return ResponseEntity.ok().body(new Response("Failed",400,""));
+		}
 	}
 	
 }

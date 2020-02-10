@@ -5,6 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import com.bridgelabz.fundoonotes.dto.NoteDto;
+import com.bridgelabz.fundoonotes.dto.NoteEdite;
 import com.bridgelabz.fundoonotes.model.Notes;
 
 public interface ServiceNotes 
@@ -29,5 +30,7 @@ public interface ServiceNotes
 	boolean reminder(String token, long id,String reminder);
 
 	boolean addlabels(String token, long id, long idl);
+
+	boolean edite(String token, long id, NoteEdite edite);
 
 }
