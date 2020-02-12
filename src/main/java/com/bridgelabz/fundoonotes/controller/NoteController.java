@@ -42,8 +42,8 @@ public class NoteController {
 		}
 	}
 
-	@PutMapping("/archive/{Id}")
-	public ResponseEntity<Response> updateAchive(@Valid @RequestHeader("token") String token,
+	@PutMapping("/archive/{Id}/{Token}")
+	public ResponseEntity<Response> updateAchive(@Valid @PathVariable("Token") String token,
 			@PathVariable("Id") long Id) {
 
 		boolean b = service.updateArchive(Id, token);
@@ -54,8 +54,8 @@ public class NoteController {
 		}
 	}
 
-	@PutMapping("/pin/{Id}")
-	public ResponseEntity<Response> updatePin(@Valid @RequestHeader("token") String token,
+	@PutMapping("/pin/{Id}/{Token}")
+	public ResponseEntity<Response> updatePin(@Valid @PathVariable("Token") String token,
 			@PathVariable("Id") long Id) {
 		boolean b = service.updatePin(Id, token);
 		if (b) {
@@ -65,8 +65,8 @@ public class NoteController {
 		}
 	}
 
-	@PutMapping("/trash/{Id}")
-	public ResponseEntity<Response> update(@Valid @RequestHeader("Token") String token, @PathVariable("Id") long id) {
+	@PutMapping("/trash/{Id}/{Token}")
+	public ResponseEntity<Response> update(@Valid @PathVariable("Token") String token, @PathVariable("Id") long id) {
 		boolean b = service.updateTrash(token, id);
 		if (b) {
 			return ResponseEntity.ok().body(new Response("updated", 200, id));
@@ -76,8 +76,8 @@ public class NoteController {
 		}
 	}
 
-	@PutMapping("/colour/{Id}")
-	public ResponseEntity<Response> colourChange(@RequestHeader("token") String token, @PathVariable("Id") long id,
+	@PutMapping("/colour/{Id}/{Token}")
+	public ResponseEntity<Response> colourChange(@PathVariable("Token") String token, @PathVariable("Id") long id,
 			@RequestHeader("colour") String colour) {
 		System.out.println("Welcome");
 		boolean b = service.colourChange(token, id, colour);
@@ -92,7 +92,7 @@ public class NoteController {
 	}
 	
 	@GetMapping("/getNotes/{Id}")
-	public ResponseEntity<Response> getNotes(@Valid @RequestHeader("token") String token,@PathVariable("Id") long id)
+	public ResponseEntity<Response> getNotes(@Valid @RequestHeader("Token") String token,@PathVariable("Id") long id)
 	{
 		Notes b=service.getNotes(token,id);
 		if(b!=null)
@@ -119,8 +119,8 @@ public class NoteController {
 		}
 	}
 	
-	@DeleteMapping("/deletnote/{Id}")
-	public ResponseEntity<Response> deletAll(@RequestHeader("token") String token,@PathVariable("Id") long id)
+	@DeleteMapping("/deletnote/{Id}/{Token}")
+	public ResponseEntity<Response> deletAll(@PathVariable("Token") String token,@PathVariable("Id") long id)
 	{
 		boolean b=service.delete(token,id);
 		if(b)
@@ -132,8 +132,8 @@ public class NoteController {
 			return ResponseEntity.ok().body(new Response("Delete Failed",400,""));
 		}
 	}
-	@PutMapping("/reminder/{Id}")
-	public ResponseEntity<Response> reminder(@RequestHeader("token") String token,@PathVariable("Id") long id,@RequestHeader("reminder") String reminder)
+	@PutMapping("/reminder/{Id}/{Token}")
+	public ResponseEntity<Response> reminder(@PathVariable("Token") String token,@PathVariable("Id") long id,@RequestHeader("reminder") String reminder)
 	{
 		boolean b=service.reminder(token,id,reminder);
 		if(b)
@@ -146,8 +146,8 @@ public class NoteController {
 		}
 	}
 	
-	@PutMapping("/addlabels/{id}/{idl}")
-	public ResponseEntity<Response> addLabels(@RequestHeader String token,@PathVariable long id,@PathVariable long idl)
+	@PutMapping("/addlabels/{id}/{idl}/{token}")
+	public ResponseEntity<Response> addLabels(@PathVariable String token,@PathVariable long id,@PathVariable long idl)
 	{
 		boolean b=service.addlabels(token,id,idl);
 		if(b)
@@ -164,6 +164,7 @@ public class NoteController {
 	@PutMapping("/editNotes/{id}/{token}")
 	public ResponseEntity<Response> edite(@PathVariable String token,@PathVariable long id,@RequestBody NoteEdite edite)
 	{
+		System.out.println(edite);
 		boolean b=service.edite(token,id,edite);
 		if(b)
 		{

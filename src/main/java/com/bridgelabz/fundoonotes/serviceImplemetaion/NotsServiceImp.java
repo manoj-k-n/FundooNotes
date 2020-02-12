@@ -60,7 +60,7 @@ public class NotsServiceImp implements ServiceNotes {
 		User u = userRepo.findOneByEmail(s);
 		Notes n = NotesRep.findById(id);
 		if (n != null & u != null) {
-			n.setArchive(true);
+			n.setArchive(!n.isArchive());
 			n.setUpdateDate(n.getUpdateDate());
 			NotesRep.save(n);
 			return true;
@@ -75,7 +75,7 @@ public class NotsServiceImp implements ServiceNotes {
 		User u = userRepo.findOneByEmail(s);
 		Notes n = NotesRep.findById(id);
 		if (n != null && u != null) {
-			n.setPin_Note(true);
+			n.setPin_Note(!n.isPin_Note());
 			n.setUpdateDate(n.getUpdateDate());
 			NotesRep.save(n);
 			return true;
@@ -90,7 +90,7 @@ public class NotsServiceImp implements ServiceNotes {
 		User u = userRepo.findOneByEmail(s);
 		Notes n = NotesRep.findById(id);
 		if (n != null & u != null) {
-			n.setTrash(true);
+			n.setTrash(!n.isTrash());
 			n.setUpdateDate(n.getUpdateDate());
 			NotesRep.save(n);
 			return true;
