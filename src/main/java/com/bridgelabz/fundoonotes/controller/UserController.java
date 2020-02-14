@@ -1,4 +1,4 @@
-package com.bridgelabz.fundoonotes.controller;
+ package com.bridgelabz.fundoonotes.controller;
 
 import javax.validation.Valid;
 

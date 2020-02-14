@@ -61,6 +61,8 @@ public class NotsServiceImp implements ServiceNotes {
 		Notes n = NotesRep.findById(id);
 		if (n != null & u != null) {
 			n.setArchive(!n.isArchive());
+			n.setPin_Note(false);
+			n.setTrash(false);
 			n.setUpdateDate(n.getUpdateDate());
 			NotesRep.save(n);
 			return true;
@@ -76,6 +78,8 @@ public class NotsServiceImp implements ServiceNotes {
 		Notes n = NotesRep.findById(id);
 		if (n != null && u != null) {
 			n.setPin_Note(!n.isPin_Note());
+			n.setArchive(false);
+			n.setTrash(false);
 			n.setUpdateDate(n.getUpdateDate());
 			NotesRep.save(n);
 			return true;
@@ -91,6 +95,8 @@ public class NotsServiceImp implements ServiceNotes {
 		Notes n = NotesRep.findById(id);
 		if (n != null & u != null) {
 			n.setTrash(!n.isTrash());
+			n.setArchive(false);
+			n.setPin_Note(false);
 			n.setUpdateDate(n.getUpdateDate());
 			NotesRep.save(n);
 			return true;
