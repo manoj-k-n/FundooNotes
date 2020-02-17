@@ -35,19 +35,19 @@ public class UserServiceImplementation implements ServiceInterface {
 
 			User us = new User();
 
-			us.setFistname(user.getFirstname());
+			us.setFirstname(user.getFirstname());
 			us.setLastname(user.getLastname());
 			us.setMobileno(user.getMobileno());
 			us.setPassword(util.encoder(user.getPassword()));
-			us.setPassword2(util.encoder(user.getPasswordagain()));
-			us.setMail(user.getEmail());
+			us.setPassword(util.encoder(user.getPasswordagain()));
+			us.setEmail(user.getEmail());
 			us.setCreatdate();
 
 			userRepo.save(us);
 			
-			String Token = util.jwtToken(us.getMail());
+			String Token = util.jwtToken(us.getEmail());
 			String token = "";
-			mail.sendVerificationMail(us.getMail(), Token);
+			mail.sendVerificationMail(us.getEmail(), Token);
 			return true;
 
 		} catch (Exception e) {
@@ -61,11 +61,11 @@ public class UserServiceImplementation implements ServiceInterface {
 	public String login(UserDTOLogin user) {
 		User u = userRepo.findOneByEmail(user.getEmail());
 		
-		if (u != null && u.getMail().equals(user.getEmail())
+		if (u != null && u.getEmail().equals(user.getEmail())
 				&& util.passwordMatcher(user.getPassword(), u.getPassword()) && u.isIs_email_verify()) 
 		{
 			try {
-				String s=util.jwtToken(u.getMail());
+				String s=util.jwtToken(u.getEmail());
 				System.out.println("its Working");
 				return s;
 			} catch (IllegalArgumentException | JWTCreationException | UnsupportedEncodingException e) {
@@ -83,6 +83,7 @@ public class UserServiceImplementation implements ServiceInterface {
 
 	@Override
 	public boolean verificationMail(String token) {
+		System.out.println("gajfakfakfvakfja     welocme");
 		System.out.println(token);
 		String JWT = util.MailDetails(token);
 
@@ -110,7 +111,7 @@ public class UserServiceImplementation implements ServiceInterface {
 		if (u != null && u.isIs_email_verify() == true) {
 			try {
 				String token = util.jwtToken(user.getEmail());
-				mail.sendpassword(u.getMail(), token);
+				mail.sendpassword(u.getEmail(), token);
 				return token;
 			} catch (IllegalArgumentException | JWTCreationException | UnsupportedEncodingException e) {
 
@@ -130,7 +131,7 @@ public class UserServiceImplementation implements ServiceInterface {
 			String JWT = util.MailDetails(token);
 			User u = userRepo.findOneByEmail(JWT);
 			u.setPassword(util.encoder(user.getPassword()));
-			u.setPassword2(util.encoder(user.getPasswordagain()));
+			u.setPassword(util.encoder(user.getPasswordagain()));
 			userRepo.save(u);
 			
 			return true;

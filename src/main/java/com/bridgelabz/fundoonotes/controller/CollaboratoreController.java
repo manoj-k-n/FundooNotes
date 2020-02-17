@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,10 +17,13 @@ import com.bridgelabz.fundoonotes.dto.CollaboraterDto;
 import com.bridgelabz.fundoonotes.model.Collaborater;
 import com.bridgelabz.fundoonotes.response.Response;
 import com.bridgelabz.fundoonotes.service.ServiceCollaboratore;
+import com.bridgelabz.fundoonotes.serviceImplemetaion.NotsServiceImp;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class CollaboratoreController 
 {
+	
 	
 	@Autowired
 	private ServiceCollaboratore service;
@@ -51,9 +55,10 @@ public ResponseEntity<Response> collaborate(@RequestHeader String token,@PathVar
 	}
 }
 
-@GetMapping("/getAllCollaborate/{idn}")
-public ResponseEntity<Response> getAll(@RequestHeader String token,@PathVariable long idn)
+@GetMapping("/getAllCollaborate/{idn}/{token}")
+public ResponseEntity<Response> getAll(@PathVariable String token,@PathVariable long idn)
 {
+	System.out.println("welocme");
 	List<Collaborater> b=service.getAllCollaborate(token,idn);
 	if(b!=null)
 	{

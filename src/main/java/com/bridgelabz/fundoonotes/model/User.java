@@ -43,65 +43,127 @@ private boolean is_email_verify;
 private List<Notes> notes;
 
 
+
 public long getId() {
 	return id;
 }
+
+
+
 public void setId(long id) {
 	this.id = id;
 }
-public Date getCreatdate() {
-	return creatdate;
-	
-}
-public void setCreatdate() 
-{
-	this.creatdate=new Date();
-}
 
-public String getFistname() {
+
+
+public String getFirstname() {
 	return firstname;
 }
-public void setFistname(String fistname) {
-	this.firstname = fistname;
+
+
+
+public void setFirstname(String firstname) {
+	this.firstname = firstname;
 }
+
+
+
 public String getLastname() {
 	return lastname;
 }
+
+
+
 public void setLastname(String lastname) {
 	this.lastname = lastname;
 }
-public String getMail() {
+
+
+
+public String getEmail() {
 	return email;
 }
-public void setMail(String email) {
+
+
+
+public void setEmail(String email) {
 	this.email = email;
 }
+
+
+
 public long getMobileno() {
 	return mobileno;
 }
+
+
+
 public void setMobileno(long mobileno) {
 	this.mobileno = mobileno;
 }
+
+
+
 public String getPassword() {
 	return password;
-}  
+}
+
+
+
 public void setPassword(String password) {
 	this.password = password;
 }
-public String getPassword2() {
+
+
+
+public String getPasswordagain() {
 	return passwordagain;
 }
-public void setPassword2(String password2) 
-{
-	this.passwordagain = password2;
+
+
+
+public void setPasswordagain(String passwordagain) {
+	this.passwordagain = passwordagain;
 }
+
+
+
+public Date getCreatdate() {
+	return creatdate;
+}
+
+
+
+public void setCreatdate() {
+	this.creatdate =new Date();
+}
+
+
 
 public boolean isIs_email_verify() {
 	return is_email_verify;
 }
+
+
+
 public void setIs_email_verify(boolean is_email_verify) {
 	this.is_email_verify = is_email_verify;
 }
+
+
+
+public List<Notes> getNotes() {
+	return notes;
+}
+
+
+
+public void setNotes(List<Notes> notes) {
+	this.notes = notes;
+}
+
+
+
 @Override
 public String toString() {
 	return "User [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", email=" + email + ", mobileno="

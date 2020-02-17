@@ -28,17 +28,23 @@ public class CollaboratoryImp implements ServiceCollaboratore {
 	@Autowired
 	private NoteRepository note;
 
+	@Autowired
+	private NotsServiceImp noteservice;
+	
 	@Override
 	public boolean collaboratore(String token, long idn, CollaboraterDto email) {
 
 		String s = util.MailDetails(token);
 		User u = user.findOneByEmail(s);
 		User u1 = user.findOneByEmail(email.getEmail());
+//		System.out.println();
 		Notes n = note.findById(idn);
 		if (u != null && u1 != null && n != null) {
 			Collaborater co = new Collaborater();
 			co.setNotes(n);
 			co.setEmail((String) email.getEmail());
+			
+//			noteservice.creatnots(n,)
 
 			collaboRep.save(co);
 
