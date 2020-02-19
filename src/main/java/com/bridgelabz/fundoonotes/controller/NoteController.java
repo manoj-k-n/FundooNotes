@@ -176,4 +176,19 @@ public class NoteController {
 		}
 	}
 	
+	@PutMapping("editeText/{id}/{token}")
+	public ResponseEntity<Response> editeText(@PathVariable String token,@PathVariable long id,@RequestBody Notes edite)
+	{
+		boolean b=service.editeText(token,id,edite);
+		if(b)
+		{
+			return ResponseEntity.ok().body(new Response("Success",200,""));
+		}
+		else
+		{
+			return ResponseEntity.ok().body(new Response("failed",400,""));
+		}
+	}
+	
+	
 }

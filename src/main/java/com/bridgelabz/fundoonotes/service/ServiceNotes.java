@@ -33,4 +33,6 @@ public interface ServiceNotes
 
 	boolean edite(String token, long id, NoteEdite edite);
 
+	boolean editeText(String token, long idn, Notes edite);
+
 }

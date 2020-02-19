@@ -209,4 +209,23 @@ public class NotsServiceImp implements ServiceNotes {
 		 return false;
 	 }
 	}
+	
+	@Override
+	public boolean editeText(String token, long idn, Notes edite) {
+	String s=util.MailDetails(token);
+	User u=userRepo.findOneByEmail(s);
+	Notes n=NotesRep.findById(idn);
+	if(u!=null&&n!=null)
+	{
+		n.setTitle((String) edite.getTitle());
+		n.setTake_a_note((String) edite.getTake_a_note());
+		NotesRep.save(n);
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+		
+	}
 }

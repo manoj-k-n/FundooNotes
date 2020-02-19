@@ -27,9 +27,10 @@ public class CollaboratoreController
 	
 	@Autowired
 	private ServiceCollaboratore service;
-@PostMapping("/collaboratore/{idn}")
-public ResponseEntity<Response> collaborate(@RequestHeader String token ,@PathVariable long idn,@RequestBody CollaboraterDto email)
+@PostMapping("/collaboratore/{idn}/{token}")
+public ResponseEntity<Response> collaborate(@PathVariable String token ,@PathVariable long idn,@RequestBody CollaboraterDto email)
 {
+	System.out.println("............................................");
 	boolean b=service.collaboratore(token,idn,email);
 	if(b)
 	{
