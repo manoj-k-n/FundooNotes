@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,12 +21,13 @@ import com.bridgelabz.fundoonotes.response.Response;
 import com.bridgelabz.fundoonotes.service.ServiceLabel;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class LabelsController 
 {   
 	@Autowired
     private ServiceLabel service;
-	@PostMapping("/labels")
-	public ResponseEntity<Response> createLabels(@RequestBody LabelDto label,@RequestHeader String token)
+	@PostMapping("/labels/{token}")
+	public ResponseEntity<Response> createLabels(@RequestBody LabelDto label,@PathVariable String token)
 	{
 		boolean b=service.createLabels(label,token);
 		if(b)
@@ -37,8 +39,8 @@ public class LabelsController
 			return ResponseEntity.ok().body(new Response("Failed",400,""));
 		}
 	}
-	@DeleteMapping("/deletelabel/{id}")
-	public ResponseEntity<Response> deletlabel(@RequestHeader String token,@PathVariable long id)
+	@DeleteMapping("/deletelabel/{id}/{token}")
+	public ResponseEntity<Response> deletlabel(@PathVariable String token,@PathVariable long id)
 	{
 		boolean b=service.deletlabel(token,id);
 		if(b)
@@ -64,8 +66,8 @@ public class LabelsController
 		}
 	}
 	
-	@GetMapping("/getall")
-	public ResponseEntity<Response> getAlllabels(@RequestHeader String token)
+	@GetMapping("/getall/{token}")
+	public ResponseEntity<Response> getAlllabels(@PathVariable String token)
 	{
 		List<Labels> b=service.getAllLabels(token);
 		if(b!=null)

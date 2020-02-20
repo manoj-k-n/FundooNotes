@@ -79,9 +79,15 @@ public class LabelsServiceImp implements ServiceLabel {
 		String s = util.MailDetails(token);
 
 		User u = userRep.findOneByEmail(s);
+		 long id=u.getId();
+		 
+//		 List<Labels> ll=labels.
+//		System.out.println(ll);
 
 		if (u != null) {
-			return labels.findAll();
+			List<Labels> l=labels.findAllById(u);
+			System.out.println(l);
+			return l;
 
 		} else {
 			return null;
