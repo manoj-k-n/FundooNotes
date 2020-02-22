@@ -26,6 +26,7 @@ public class LabelsController
 {   
 	@Autowired
     private ServiceLabel service;
+	
 	@PostMapping("/labels/{token}")
 	public ResponseEntity<Response> createLabels(@RequestBody LabelDto label,@PathVariable String token)
 	{

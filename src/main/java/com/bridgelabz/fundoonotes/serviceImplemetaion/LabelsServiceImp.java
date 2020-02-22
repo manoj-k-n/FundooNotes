@@ -31,7 +31,7 @@ public class LabelsServiceImp implements ServiceLabel {
 
 		String s = util.MailDetails(token);
 		User u = userRep.findOneByEmail(s);
-		Labels ll = labels.findById(8);
+//		Labels ll = labels.findByLabelid(id)(8);
 
 		if (u != null) {
 			Labels l = new Labels();
@@ -48,9 +48,13 @@ public class LabelsServiceImp implements ServiceLabel {
 	public boolean deletlabel(String token, long id) {
 		String s = util.MailDetails(token);
 		User u = userRep.findOneByEmail(s);
-		Labels l = labels.findById(id);
+		Labels l = labels.findByLabelid(id);
 
 		if (u != null && l != null) {
+//			System.out.println("it is comming deletelabel");
+////			labels.deleteById(id);
+//			labels.deleteByUserAndLabelid(u, id);
+//			System.out.println("completed");
 			labels.deleteById(id);
 			return true;
 		} else {
@@ -62,7 +66,7 @@ public class LabelsServiceImp implements ServiceLabel {
 	public boolean updatelabels(String token, long id, LabelDto name) {
 		String s = util.MailDetails(token);
 		User u = userRep.findOneByEmail(s);
-		Labels l = labels.findById(id);
+		Labels l = labels.findByLabelid(id);
 		if (u != null && l != null) {
 			l.setLabelTitle(name.getName());
 			
@@ -86,6 +90,7 @@ public class LabelsServiceImp implements ServiceLabel {
 
 		if (u != null) {
 			List<Labels> l=labels.findAllById(u);
+			     
 			System.out.println(l);
 			return l;
 
@@ -98,7 +103,7 @@ public class LabelsServiceImp implements ServiceLabel {
 	public List<Notes> getAllNotes(String token, long idl) {
 		String s = util.MailDetails(token);
 		User u = userRep.findOneByEmail(s);
-		Labels l = labels.findById(idl);
+		Labels l = labels.findByLabelid(idl);
 
 		if (u != null && l != null) {
 			System.out.println(l.getNoteList());
@@ -114,7 +119,7 @@ public class LabelsServiceImp implements ServiceLabel {
 	public boolean changeLabels(String token, long idl, long id) {
 		String s = util.MailDetails(token);
 		User u = userRep.findOneByEmail(s);
-		Labels l = labels.findById(idl);
+		Labels l = labels.findByLabelid(idl);
 		Notes n = noteRep.findById(id);
 		if (u != null && l != null && n != null) {
 			
@@ -129,7 +134,7 @@ public class LabelsServiceImp implements ServiceLabel {
 	public boolean removelabel(String token, long idl, long id) {
 		String s = util.MailDetails(token);
 		User u = userRep.findOneByEmail(s);
-		Labels l = labels.findById(idl);
+		Labels l = labels.findByLabelid(idl);
 		Notes n = noteRep.findById(id);
 		if (u != null && l != null && n != null) {
 			n.getLabel().remove(l);

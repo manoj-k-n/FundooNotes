@@ -13,8 +13,8 @@ import com.bridgelabz.fundoonotes.model.User;
 @Repository
 public interface labelsRepository extends JpaRepository<Labels ,Long>
 {
-   Labels findById(long id);
-   
+   Labels findByLabelid(long id);
+   void deleteByUserAndLabelid(User user, long id);
    
    @Query("from Labels where user=:user")
   List<Labels> findAllById(User user);

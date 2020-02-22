@@ -45,6 +45,7 @@ public class NotsServiceImp implements ServiceNotes {
 			notes.setTitle((String) note.getTitle());
 			notes.setTake_a_note((String) note.getTake_a_note());
 			notes.setCreatDate(notes.getCreatDate());
+			notes.setColour(note.getColour());
 			notes.setUser(u);
 
 			NotesRep.save(notes);
@@ -178,7 +179,7 @@ public class NotsServiceImp implements ServiceNotes {
 		String s = util.MailDetails(token);
 		User u = userRepo.findOneByEmail(s);
 		Notes n = NotesRep.findById(id);
-		Labels l = labels.findById(idl);
+		Labels l = labels.findByLabelid(idl);
 		if (u != null && n != null && l != null) {
 //			n.getLabel().add(l);
 			n.getLabel().add(l);
@@ -200,7 +201,7 @@ public class NotsServiceImp implements ServiceNotes {
 		 n.setArchive(edite.isArchive());
 		 n.setColour(edite.getColour());
 		 n.setPin_Note(edite.isPin_note());
-		 n.setTrash(edite.isTransh());
+		
 		 NotesRep.save(n);
 		 return true;
 	 }

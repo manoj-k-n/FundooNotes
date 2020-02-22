@@ -16,7 +16,15 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Labels {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long Id;
+	private long labelid;
+	public long getLabelid() {
+		return labelid;
+	}
+
+	public void setLabelid(long labelid) {
+		this.labelid = labelid;
+	}
+
 	@NotNull
 	private String labelTitle;
      @JsonIgnore
@@ -27,13 +35,7 @@ public class Labels {
 	@ManyToOne
 	private User user;
 
-	public long getId() {
-		return Id;
-	}
-
-	public void setId(long id) {
-		Id = id;
-	}
+	
 
 	public String getLabelTitle() {
 		return labelTitle;
@@ -61,7 +63,7 @@ public class Labels {
 
 	@Override
 	public String toString() {
-		return "Labels [Id=" + Id + ", labelTitle=" + labelTitle + ", noteList=" + noteList + ", user=" + user + "]";
+		return "Labels [Id=" + labelid + ", labelTitle=" + labelTitle + ", noteList=" + noteList + ", user=" + user + "]";
 	}
 
 }

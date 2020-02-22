@@ -39,7 +39,7 @@ public class UserServiceImplementation implements ServiceInterface {
 			us.setLastname(user.getLastname());
 			us.setMobileno(user.getMobileno());
 			us.setPassword(util.encoder(user.getPassword()));
-			us.setPassword(util.encoder(user.getPasswordagain()));
+			us.setPasswordagain(util.encoder(user.getPasswordagain()));
 			us.setEmail(user.getEmail());
 			us.setCreatdate();
 

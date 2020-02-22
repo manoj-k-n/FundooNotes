@@ -7,7 +7,7 @@ public class NoteEdite {
 	private boolean archive;
 	private boolean pin_note;
 	private String colour;
-	private boolean transh;
+	
 	public String getTitle() {
 		return title;
 	}
@@ -38,17 +38,13 @@ public class NoteEdite {
 	public void setColour(String colour) {
 		this.colour = colour;
 	}
-	public boolean isTransh() {
-		return transh;
-	}
-	public void setTransh(boolean transh) {
-		this.transh = transh;
-	}
 	@Override
 	public String toString() {
 		return "NoteEdite [title=" + title + ", Take_a_note=" + Take_a_note + ", archive=" + archive + ", pin_note="
-				+ pin_note + ", colour=" + colour + ", transh=" + transh + "]";
+				+ pin_note + ", colour=" + colour + "]";
 	}
+	
+	
 	
 	
 }
