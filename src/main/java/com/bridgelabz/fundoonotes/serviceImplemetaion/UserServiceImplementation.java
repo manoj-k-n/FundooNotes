@@ -2,6 +2,7 @@ package com.bridgelabz.fundoonotes.serviceImplemetaion;
 
 import java.io.UnsupportedEncodingException;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,11 @@ import com.bridgelabz.fundoonotes.model.User;
 import com.bridgelabz.fundoonotes.service.ServiceInterface;
 import com.bridgelabz.fundoonotes.utility.MailVerification;
 import com.bridgelabz.fundoonotes.utility.Utility;
+import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
 
 @Service
 public class UserServiceImplementation implements ServiceInterface {
@@ -27,7 +33,18 @@ public class UserServiceImplementation implements ServiceInterface {
 
 	@Autowired
 	private MailVerification mail;
-
+	
+	@Autowired
+    private AmqpTemplate rabbitTemplate;
+	
+	@Value("${javainuse.rabbitmq.exchange}")
+	private String exchange;
+	
+	@Value("${javainuse.rabbitmq.routingkey}")
+	private String routingkey;
+	
+	
+	
 	@Override
 	public boolean register(UserDto user) {
 
@@ -47,7 +64,10 @@ public class UserServiceImplementation implements ServiceInterface {
 			
 			String Token = util.jwtToken(us.getEmail());
 			String token = "";
+			rabbitTemplate.convertAndSend(exchange,routingkey,user.getEmail());
+			System.out.println("rabittmq "+user.getEmail());
 			mail.sendVerificationMail(us.getEmail(), Token);
+			
 			return true;
 
 		} catch (Exception e) {
@@ -142,5 +162,6 @@ public class UserServiceImplementation implements ServiceInterface {
 		}
 
 	}
-
+	
+	
 }
