@@ -16,6 +16,7 @@ import com.bridgelabz.fundoonotes.dto.NoteEdite;
 import com.bridgelabz.fundoonotes.model.Labels;
 import com.bridgelabz.fundoonotes.model.Notes;
 import com.bridgelabz.fundoonotes.model.User;
+import com.bridgelabz.fundoonotes.service.ElasticSerachService;
 import com.bridgelabz.fundoonotes.service.ServiceNotes;
 import com.bridgelabz.fundoonotes.utility.Utility;
 
@@ -32,6 +33,9 @@ public class NotsServiceImp implements ServiceNotes {
 
 	@Autowired
 	private labelsRepository labels;
+	
+	@Autowired
+	private ElasticSerachService elasticSerach;
 
 	@Override
 	public boolean creatnots(NoteDto note, String token) {
@@ -49,7 +53,15 @@ public class NotsServiceImp implements ServiceNotes {
 			notes.setUser(u);
 
 			NotesRep.save(notes);
-			return true;
+			System.out.println("notes details "+notes);
+			if(notes!=null)
+			{
+				System.out.println("passing");
+				elasticSerach.createNote(notes);
+				return true;	
+			}
+			return false;
+			
 		} else {
 			return false;
 		}
@@ -140,6 +152,8 @@ public class NotsServiceImp implements ServiceNotes {
 		User u = userRepo.findOneByEmail(s);
 		if (u != null) {
 			List<Notes> l = NotesRep.findAll();
+			System.out.println("notes");
+			System.out.println(l);
 			return l;
 		} else
 			return null;
@@ -150,7 +164,19 @@ public class NotsServiceImp implements ServiceNotes {
 		String s = util.MailDetails(token);
 		User u = userRepo.findOneByEmail(s);
 		if (u != null) {
-			NotesRep.deleteById(id);
+			System.out.println(id);
+//			NotesRep.deleteById(id);
+			Notes n=NotesRep.findById(id);
+//			List<Notes> nn=NotesRep.findAll();
+//			
+//			for(Notes o:nn)
+//			{
+//				System.out.println("Notes" );
+//				System.out.println(o);
+//				System.out.println("Notes gon");
+//			}
+//			System.out.println(n);
+			NotesRep.delete(n);
 			return true;
 		} else {
 			return false;
